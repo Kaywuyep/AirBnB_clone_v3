@@ -82,11 +82,11 @@ class FileStorage:
             return None
         obj_cls = models.storage.all(cls)
         for value in obj_cls.values():
-            for (value.id == id):
+            if (value.id == id):
                 return value
         return None
 
-    def count(self cls=None):
+    def count(self, cls=None):
         """counts the number of objects in the class data
         where data is info
         info = self.all(cls)
