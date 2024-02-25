@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Init file for views module"""
+"""Init file for views module it contains the blue print for the API"""
 from flask import Blueprint
 
 
