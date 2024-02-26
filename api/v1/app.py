@@ -15,6 +15,11 @@ def teardown_db(obj):
     """ calls methods close() to end session """
     storage.close()
 
+@app.errorhandler(404)
+def page_not_found(error):
+    """Handles 404 error"""
+    return ({'error': 'Not found'}), 404
+
 
 if __name__ == "__main__":
     host = getenv('HBNB_API_HOST', default='0.0.0.0')
